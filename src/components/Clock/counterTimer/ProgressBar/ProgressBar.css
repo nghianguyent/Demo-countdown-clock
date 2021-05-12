@@ -1,0 +1,25 @@
+.progress-bar {
+    position: relative;
+}
+.progress-bar svg {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    z-index: 1000;
+}
+.progress-bar svg circle { 
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: #7894FF; /* light purple */
+    stroke-width: 10;
+    stroke-linecap: round;
+    transform: translate(5px, 5px);
+    -webkit-transition-duration: 1s;
+    transition-duration: 1s;
+}
+.progress-bar svg circle:nth-child(2) {
+    stroke: #FF9D72; /* light orange */
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+}

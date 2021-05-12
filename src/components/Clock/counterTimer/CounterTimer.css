@@ -1,0 +1,39 @@
+@font-face {
+    font-family: "Square Sans";
+    src: url(./../../../asset/font/square_sans_serif_7.ttf);
+}
+@font-face {
+    font-family: "Genica";
+    src: url(./../../../asset/font/SVN-Genica_Pro.otf);
+}
+.clock-container {
+    position: relative;
+}
+.clock-counter {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: #7894FF; /* light purple */
+    font-family: "Genica", sans-serif;
+    font-weight: 600;
+    margin: 0 2rem; 
+}
+.clock-timer {
+    font-size: 3.4rem;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+    position: absolute;
+}
+.clock-unit {
+    font-size: 1.8rem;
+    position: relative;
+}

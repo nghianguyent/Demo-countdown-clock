@@ -1,0 +1,66 @@
+import React from 'react';
+import CounterTimer from './counterTimer/CounterTimer.jsx';
+import './Clock.css'
+class Clock extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            date: new Date(2021, 4, 15, 0, 0, 0),
+            startDate: new Date(2021, 4, 10, 23, 59, 59),
+            currentDate: new Date(),
+            countDownTimer: new Date(),
+        };
+    };
+    componentDidMount() {
+        this.setTime = setInterval(() => this.countDown(), 1000);
+    };
+    componentWillUnmount() {
+        clearInterval(this.setTime);
+    };
+    countDown() {
+        if (this.state.date.getTime() - this.state.currentDate.getTime() !== 0){
+            this.setState({
+                countDownTimer: new Date(this.state.date.getTime() - this.state.currentDate.getTime()),
+                currentDate: new Date(),
+            });
+        };
+    };
+    render() {
+        return (
+            <div className="countdown-timer">
+                <h2>Count Down To Talk Show</h2>
+                <h4>The talk shows will begin in {this.state.date.toLocaleDateString()} </h4>
+                <div className="clock-container">
+                    <CounterTimer 
+                        currentDate={this.state.countDownTimer.getDate()} 
+                        startDate={this.state.startDate.getDate()} 
+                        lastDate={this.state.date.getDate()} 
+                        unit="Day" 
+                    />
+                    <CounterTimer 
+                        currentDate={this.state.countDownTimer.getHours()} 
+                        startDate={this.state.startDate.getHours()} 
+                        lastDate={this.state.date.getHours()} 
+                        unit="Hours" 
+                    />
+                    <CounterTimer 
+                        currentDate={this.state.countDownTimer.getMinutes()} 
+                        startDate={this.state.startDate.getMinutes()} 
+                        lastDate={this.state.date.getMinutes()} 
+                        unit="Minutes" 
+                    />
+                    <CounterTimer 
+                        currentDate={this.state.countDownTimer.getSeconds()} 
+                        startDate={this.state.startDate.getSeconds()} 
+                        lastDate={this.state.date.getSeconds()} 
+                        unit="Seconds" 
+                    />
+                </div>
+            </div>
+        );
+    };
+};
+
+
+
+export default Clock;
