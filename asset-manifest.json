@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/Demo-countdown-clock/static/css/main.254ffd94.chunk.css",
+    "main.js": "/Demo-countdown-clock/static/js/main.260296c4.chunk.js",
+    "main.js.map": "/Demo-countdown-clock/static/js/main.260296c4.chunk.js.map",
+    "runtime-main.js": "/Demo-countdown-clock/static/js/runtime-main.c492add8.js",
+    "runtime-main.js.map": "/Demo-countdown-clock/static/js/runtime-main.c492add8.js.map",
+    "static/js/2.171d1ebd.chunk.js": "/Demo-countdown-clock/static/js/2.171d1ebd.chunk.js",
+    "static/js/2.171d1ebd.chunk.js.map": "/Demo-countdown-clock/static/js/2.171d1ebd.chunk.js.map",
+    "static/js/3.cf8dee03.chunk.js": "/Demo-countdown-clock/static/js/3.cf8dee03.chunk.js",
+    "static/js/3.cf8dee03.chunk.js.map": "/Demo-countdown-clock/static/js/3.cf8dee03.chunk.js.map",
+    "index.html": "/Demo-countdown-clock/index.html",
+    "static/css/main.254ffd94.chunk.css.map": "/Demo-countdown-clock/static/css/main.254ffd94.chunk.css.map",
+    "static/js/2.171d1ebd.chunk.js.LICENSE.txt": "/Demo-countdown-clock/static/js/2.171d1ebd.chunk.js.LICENSE.txt",
+    "static/media/Clock.css": "/Demo-countdown-clock/static/media/SVN-Genica_Pro.84739265.otf",
+    "static/media/CounterTimer.css": "/Demo-countdown-clock/static/media/square_sans_serif_7.a0b3846f.ttf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c492add8.js",
+    "static/js/2.171d1ebd.chunk.js",
+    "static/css/main.254ffd94.chunk.css",
+    "static/js/main.260296c4.chunk.js"
+  ]
+}
