@@ -5,7 +5,7 @@ import ProgressBar from './ProgressBar/ProgressBar.jsx';
 const CounterTimer = (props) => {
     let percent = 0;
     if ((props.lastDate - props.startDate) !== 0){
-        percent = (props.currentDate - props.startDate) / (props.lastDate - props.startDate) * 100;
+        percent = parseInt(Math.abs(props.currentDate) / Math.abs(props.lastDate - props.startDate) * 100 );
     }
     return ( 
         <div className="clock-counter"> 

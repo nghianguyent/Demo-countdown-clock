@@ -21,5 +21,4 @@
 .progress-bar svg circle:nth-child(2) {
     stroke: #FF9D72; /* light orange */
     stroke-dasharray: 440;
-    stroke-dashoffset: 440;
 }
