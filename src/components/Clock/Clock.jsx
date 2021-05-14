@@ -19,6 +19,7 @@ class Clock extends React.Component {
             seconds: 0,
         };
     };
+
     componentDidMount() {
         this.setTime = setInterval(() => this.countDown(), 1000);
     };
@@ -43,7 +44,7 @@ class Clock extends React.Component {
             <div className="countdown-timer">
                 <h2>Count Down To Talk Show</h2>
                 <h4>The talk shows will begin in {this.state.date.toDateString()} </h4>
-                <div className="clock-container">
+                <div className="clock-container ">
                     <CounterTimer 
                         currentDate={this.state.days} 
                         startDate={this.state.startDate.getDate()} 
