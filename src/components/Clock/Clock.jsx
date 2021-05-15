@@ -9,7 +9,7 @@ class Clock extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            date: new Date(2021, 4, 15, 0, 0, 0),
+            date: new Date(2021, 4, 18, 0, 0, 0),
             startDate: new Date(2021, 4, 10, 23, 59, 59),
             countDownTimer: new Date(),
             currentDate: new Date(),
@@ -27,18 +27,29 @@ class Clock extends React.Component {
         clearInterval(this.setTime);
     };
     countDown() {
-        if (this.state.date.getTime() - this.state.currentDate.getTime() !== 0){
+        debugger;
+        if (this.state.date.getTime() - this.state.currentDate.getTime() >= 0){
             this.setState({
                 countDownTimer: new Date(this.state.date.getTime() - this.state.currentDate.getTime()),
                 currentDate: new Date(),
-                days: parseInt(Math.floor(this.state.countDownTimer.getTime()  / dayToMilisecond)),
+            });
+            this.setState({
+                days: Math.floor(this.state.countDownTimer.getTime()  / dayToMilisecond),
                 hours: parseInt(Math.floor(this.state.countDownTimer.getTime() / hourToMilisecond % 24)),
                 minutes: parseInt(Math.floor(this.state.countDownTimer.getTime() / minuteToMilisecond %  60)),
                 seconds: parseInt(Math.floor(this.state.countDownTimer.getTime() / 1000 % 60))
-            }); 
+            });
+            console.log(this.state.countDownTimer.getDate());
+        } else {
+            this.setState({
+                days: 0,
+                hours: 0,
+                minutes: 0,
+                seconds: 0,
+            });
         };
     };
-
+    
     render() {
         return (
             <div className="countdown-timer">
