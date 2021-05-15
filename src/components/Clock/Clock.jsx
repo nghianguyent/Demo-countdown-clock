@@ -35,9 +35,9 @@ class Clock extends React.Component {
             });
             this.setState({
                 days: Math.floor(this.state.countDownTimer.getTime()  / dayToMilisecond),
-                hours: parseInt(Math.floor(this.state.countDownTimer.getTime() / hourToMilisecond % 24)),
-                minutes: parseInt(Math.floor(this.state.countDownTimer.getTime() / minuteToMilisecond %  60)),
-                seconds: parseInt(Math.floor(this.state.countDownTimer.getTime() / 1000 % 60))
+                hours: Math.floor(this.state.countDownTimer.getTime() / hourToMilisecond % 24),
+                minutes: Math.floor(this.state.countDownTimer.getTime() / minuteToMilisecond %  60),
+                seconds: Math.floor(this.state.countDownTimer.getTime() / 1000 % 60)
             });
             console.log(this.state.countDownTimer.getDate());
         } else {
