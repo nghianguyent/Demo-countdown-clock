@@ -1,17 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import Clock from './components/Clock/Clock.jsx';
+import React, { useState, useEffect, Suspense } from 'react';
 import LoadingScreen from './components/LoadingScreen/LoadingScreen.jsx';
+const Clock = React.lazy(() => import('./components/Clock/Clock.jsx'));
 function App() {
-  const [loading, setLoading] = useState(false);
-
   return (
-    <>
-    {loading === false ? (
-        <Clock /> 
-    ) : (
-      <LoadingScreen />
-    )}
-  </>
+    <Suspense fallback={<div>Loading...</div>}>
+      <Clock />
+    </Suspense>
   )
 }
 export default App;

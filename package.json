@@ -1,13 +1,15 @@
 {
   "homepage": "https://nghia14302.github.io/Demo-countdown-clock/",
   "name": "clock-counter",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "react": "^17.0.2",
+    "react-delay": "^0.1.0",
+    "react-delay-render": "^0.1.2",
     "react-dom": "^17.0.2",
     "react-loading-screen": "^0.0.17",
     "react-scripts": "^2.1.8",
