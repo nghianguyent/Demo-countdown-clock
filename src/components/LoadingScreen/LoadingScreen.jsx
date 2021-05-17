@@ -1,9 +1,11 @@
 import React from 'react';
-
+import CircularProgress from '@material-ui/core/CircularProgress'
+import './LoadingScreen.css';
 const LoadingScreen = () => {
     return (
         <div className="loading-screen">
-            <img src='./../../assets/images/Loader.gif' alt='Loading'></img>
+            <h2>Loading...</h2>
+            <CircularProgress color="secondary"/>
         </div>
     );
 };

@@ -9,9 +9,7 @@ const CounterTimer = (props) => {
     }
     return ( 
         <div className="clock-counter"> 
-            <ProgressBar 
-                percent={percent}
-            />
+            <ProgressBar percent={percent} />
             <div className="clock-timer">
                 {props.currentDate}
             </div>

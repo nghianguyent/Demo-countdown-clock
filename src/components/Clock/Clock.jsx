@@ -1,6 +1,7 @@
 import React from 'react';
 import CounterTimer from './counterTimer/CounterTimer.jsx';
 import './Clock.css'
+import LoadingScreen from './../LoadingScreen/LoadingScreen.jsx';
 import Delay from 'react-delay';
 const dayToMilisecond = 1000 * 60 * 60 * 24;
 const minuteToMilisecond = 1000 * 60;
@@ -16,7 +17,7 @@ class Clock extends React.Component {
             days: 0,
             hours: 0,
             minutes: 0,
-            seconds: 0,
+            seconds: -1,
         };
     };
 
@@ -46,42 +47,44 @@ class Clock extends React.Component {
                 seconds: 0,
             });
         };
-    };
-    
+    }
     render() {
         return (
-            <Delay wait={3000}>
-                <div className="countdown-timer" >
-                    <h2>Count Down To Talk Show</h2>
-                    <h4>The talk shows will begin in {this.state.date.toDateString()} </h4>
-                    <div className="clock-container " >
-                        <CounterTimer 
-                            currentDate={this.state.days} 
-                            startDate={this.state.startDate.getDate()} 
-                            lastDate={this.state.date.getDate()} 
-                            unit="Day" 
-                        />
-                        <CounterTimer 
-                            currentDate={this.state.hours} 
-                            startDate={this.state.startDate.getHours()} 
-                            lastDate={this.state.date.getHours()} 
-                            unit="Hours"
-                        />
-                        <CounterTimer 
-                            currentDate={this.state.minutes} 
-                            startDate={this.state.startDate.getMinutes()} 
-                            lastDate={this.state.date.getMinutes()} 
-                            unit="Minutes" 
-                        />
-                        <CounterTimer 
-                            currentDate={this.state.seconds} 
-                            startDate={this.state.startDate.getSeconds()} 
-                            lastDate={this.state.date.getSeconds()} 
-                            unit="Seconds" 
-                        />
-                    </div>
+        <> 
+        { this.state.seconds !== -1 ? 
+            <div className="countdown-timer" >
+                <h2>Count Down To Talk Show</h2>
+                <h4>The talk shows will begin in {this.state.date.toDateString()} </h4>
+                <div className="clock-container " >
+                    <CounterTimer 
+                        currentDate={this.state.days} 
+                        startDate={this.state.startDate.getDate()} 
+                        lastDate={this.state.date.getDate()} 
+                        unit="Day" 
+                    />
+                    <CounterTimer 
+                        currentDate={this.state.hours} 
+                        startDate={this.state.startDate.getHours()} 
+                        lastDate={this.state.date.getHours()} 
+                        unit="Hours"
+                    />
+                    <CounterTimer 
+                        currentDate={this.state.minutes} 
+                        startDate={this.state.startDate.getMinutes()} 
+                        lastDate={this.state.date.getMinutes()} 
+                        unit="Minutes" 
+                    />
+                    <CounterTimer 
+                        currentDate={this.state.seconds} 
+                        startDate={this.state.startDate.getSeconds()} 
+                        lastDate={this.state.date.getSeconds()} 
+                        unit="Seconds" 
+                    />
                 </div>
-            </Delay>
+            </div> 
+        :   <LoadingScreen />    
+        }
+        </>
         );
     };
 };
