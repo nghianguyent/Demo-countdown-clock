@@ -30,7 +30,8 @@ I use a simple UI. you can see it below or go to [this page](https://nghia14302.
  - I use Date object to get and set Date for the timer.![image](https://user-images.githubusercontent.com/22288298/118350412-b14d3300-b580-11eb-9978-e4bbb4480cd3.png)
  - Some operations is the key to count down ![image](https://user-images.githubusercontent.com/22288298/118350442-d93c9680-b580-11eb-949d-6fa7c6686151.png) ![image](https://user-images.githubusercontent.com/22288298/118350446-e3f72b80-b580-11eb-95fc-def29ecfd37e.png)
  - Using Both class and function style to create components. [Read for more detail](https://reactjs.org/docs/components-and-props.html#function-and-class-components)
+ - Materials UI make a better sense for loading ![image](https://user-images.githubusercontent.com/22288298/118480270-36307c00-b73c-11eb-95e0-d18648da5df7.png), [try it now](https://material-ui.com/components/progress/).
 # Reference
 - [Getting start with React](https://reactjs.org/docs/getting-started.html) 
-- [Materials UI](https://material-ui.com/components/progress/)
+- [Materials UI](https://material-ui.com/)
 - [Mastering Markdown Github](https://guides.github.com/features/mastering-markdown/)
