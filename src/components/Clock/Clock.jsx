@@ -1,17 +1,19 @@
 import React from 'react';
 import CounterTimer from './counterTimer/CounterTimer.jsx';
-import './Clock.css'
+import './Clock.css';
 import LoadingScreen from './../LoadingScreen/LoadingScreen.jsx';
-import Delay from 'react-delay';
+import SignUp from './SignUp/SignUp.jsx';
+
 const dayToMilisecond = 1000 * 60 * 60 * 24;
 const minuteToMilisecond = 1000 * 60;
 const hourToMilisecond = 1000 * 60 * 60;
+
 class Clock extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             date: new Date(2021, 5, 1, 0, 0, 0),
-            startDate: new Date(2021, 4, 1, 0, 0, 0),
+            startDate: new Date(2021, 4, 16, 0, 0, 0),
             countDownTimer: new Date(),
             currentDate: new Date(),
             fullDate: 0,
@@ -57,7 +59,7 @@ class Clock extends React.Component {
         <> 
         { this.state.seconds !== -1 ? 
             <div className="countdown-timer" >
-                <h2>Count Down To Talk Show</h2>
+                <h2>Count Down To Event</h2>
                 <h4>Fcode Birthday will come in {this.state.date.toDateString()} </h4>
                 <div className="clock-container " >
                     <CounterTimer 
@@ -81,6 +83,7 @@ class Clock extends React.Component {
                         unit="Seconds" 
                     />
                 </div>
+                <SignUp />
             </div> 
         :   <LoadingScreen />    
         }
