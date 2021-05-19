@@ -5,7 +5,6 @@
     position: relative;
     width: 150px;
     height: 150px;
-    z-index: 1000;
 }
 .progress-bar svg circle { 
     width: 100%;

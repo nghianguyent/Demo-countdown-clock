@@ -1,0 +1,35 @@
+.input-form {
+    font-family: 'Noto Sans', sans-serif;
+}
+.input-form input:not(#checkbox) {   
+    border: 1px solid rgba(255, 255, 255, 0.836);
+    color: white;
+    border-radius: 5px;
+    background-color: transparent;
+    width: 100%;
+    height: 2.5rem;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+}
+#checkbox {
+    margin-bottom: 2rem;
+}
+.input-form label{
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    padding: 0 0.5rem;
+}
+.input-form label a {
+    text-decoration: none;
+    color: cyan;
+}
+.input-form label a:hover {
+    text-decoration: underline;
+}
+.input-form input::placeholder{
+    color: rgba(255, 255, 255, 0.781);
+}
+.alert-validate {
+    color: white;
+    line-height: 10px;
+}
