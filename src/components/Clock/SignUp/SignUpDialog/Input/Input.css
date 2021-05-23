@@ -1,3 +1,7 @@
+input:-webkit-autofill {
+    background-color: transparent;
+    color: white;
+}
 .input-form {
     font-family: 'Noto Sans', sans-serif;
 }
@@ -29,7 +33,12 @@
 .input-form input::placeholder{
     color: rgba(255, 255, 255, 0.781);
 }
-.alert-validate {
-    color: white;
+.input-form .alert-validate {
+    font-family: "Open Sans", sans-serif;
+    font-size: 0.9rem;
+    color: rgb(248, 52, 52);
     line-height: 10px;
+}
+.input-form .snack-bar-container {
+    position: fixed;
 }

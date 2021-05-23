@@ -13,7 +13,7 @@ const SignUp = (props) => {
             <button className="login-button" onClick={open} >Sign up Now</button>  
             <DialogOverlay area-label="Login-dialog" isOpen={showDialog} onDismiss={close}>
                 <DialogContent className="dialog-container" area-label="login-container" >
-                    <SignUpDialog />
+                    <SignUpDialog closeDialog={close}/>
                     <button className="back-button">
                         <i className="icofont-arrow-left"></i>
                         <div className="back-text" onClick={close}>
